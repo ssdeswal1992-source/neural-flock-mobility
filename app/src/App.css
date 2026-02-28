@@ -1,0 +1,272 @@
+/* Neural Flock Enterprise - Premium Styles */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+}
+
+/* Slider styling */
+[data-slot="slider-track"] {
+  background: rgba(255, 255, 255, 0.1) !important;
+  height: 6px !important;
+  border-radius: 3px;
+}
+
+[data-slot="slider-range"] {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa) !important;
+  border-radius: 3px;
+}
+
+[data-slot="slider-thumb"] {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa) !important;
+  border: 2px solid white !important;
+  width: 18px !important;
+  height: 18px !important;
+  box-shadow: 0 2px 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Switch styling */
+[data-slot="switch-thumb"] {
+  background: white !important;
+}
+
+/* Select styling */
+[data-slot="select-trigger"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+[data-slot="select-content"] {
+  background: #1e1b4b !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-slot="select-item"] {
+  color: white !important;
+}
+
+[data-slot="select-item"]:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Tabs styling */
+[data-slot="tabs-list"] {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+}
+
+/* Button glow effects */
+.btn-glow {
+  position: relative;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(8px);
+}
+
+.btn-glow:hover::after {
+  opacity: 0.5;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation for pulsing elements */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Traffic light glow effects */
+.traffic-light-green {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.8);
+}
+
+.traffic-light-yellow {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.8);
+}
+
+.traffic-light-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+}
+
+/* Vehicle state indicators */
+.vehicle-moving {
+  filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.6));
+}
+
+.vehicle-stopped {
+  filter: grayscale(0.5);
+  opacity: 0.7;
+}
+
+.vehicle-braking {
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.8));
+}
+
+/* Weather overlays */
+.weather-rain {
+  background: linear-gradient(180deg, rgba(100, 116, 139, 0.1) 0%, transparent 100%);
+}
+
+.weather-fog {
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(148, 163, 184, 0.3) 100%);
+}
+
+/* Chart tooltip styling */
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+/* Tab transitions */
+.tabs-content {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Toast notifications */
+[data-sonner-toast] {
+  background: linear-gradient(135deg, #1e1b4b, #0f172a) !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .simulation-canvas {
+    height: 300px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Focus states */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Badge styling */
+.badge-enterprise {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+}
+
+/* Network visualization */
+.network-node {
+  transition: all 0.3s ease;
+}
+
+.network-node:hover {
+  r: 6;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+.network-edge {
+  transition: stroke-width 0.2s ease;
+}
+
+.network-edge:hover {
+  stroke-width: 3;
+}
+
+/* Progress bar custom styling */
+.progress-gradient {
+  background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+}
+
+/* Shadow utilities */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.shadow-glow-lg {
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
+}
